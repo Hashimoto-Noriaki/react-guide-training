@@ -10,7 +10,35 @@
     <script type="text/babel">
       const appEl = document.querySelector("#app");
       const root = ReactDOM.createRoot(appEl);
-      root.render(<h1>こんにちは</h1>);
+
+      const  Practice = () => (
+        <div>
+          <h1>Componentの練習</h1>
+        </div>
+      );
+
+      // function Practice (){
+      //   return <h1>Reactの練習</h1>
+      // }
+      // const Practice = () => {
+      //   return <h1>Componentの練習</h1>
+      // }
+      // const Practice =() => <h1>Componentの練習</h1> 
+
+      // const Practice =() => {
+      //   return (
+      //     <div>
+      //       <h1>Componentの練習</h1>
+      //     </div>
+      //   );
+      // }
+      // const a = () => {
+      //   return;
+      //   ("戻り値");
+      // }
+      // console.log(a());
+      
+      root.render(<Practice/>);
     </script>
   </body>
 </html>
