@@ -4,6 +4,7 @@ import { Fragment } from "react";
 const Child = () => {
   /* POINT Fragmentがなぜ必要なのか？
   Reactのコンポーネントはルート要素が１つでなければならない（独立したツリー構造になっている）というルールがあります。そのため、Fragmentを使うことで、複数の要素を返すコンポーネントを余分なノードを追加することなくまとめることができます。
+  下のKey属性もチェック
   */
   return (
     <Fragment key="1">
