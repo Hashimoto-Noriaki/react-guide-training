@@ -1,12 +1,23 @@
 import Child from "./components/Child";
 
 const Example = () => {
-    return (
-        <>
-            <Child />;
-            <Child color="red"/>;
-        </>
-    )
+    const hello = (arg) => `Hello ${arg}`;
+    const o = {
+        color:"red",
+        num: 123
+    }
+        return (
+            <>
+                <Child 
+                {...o}
+                fn = {hello}
+                bool
+                obj={{ name: 'Messi',age: 35 }}
+                />;
+                {/* <Child color="red"/>; */}
+            </>
+        )
+    
 };
 
 export default Example;
