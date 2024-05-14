@@ -12,6 +12,8 @@ npx create-react-app {プロジェクト名}
 npm create vite@latest my-react-app -- --template react
 npm create vite@latest my-react-app -- --template react-swc
 ```
+⚫補足
+my-react-appのアプリ名は任意
 
 ### React起動
 ```
