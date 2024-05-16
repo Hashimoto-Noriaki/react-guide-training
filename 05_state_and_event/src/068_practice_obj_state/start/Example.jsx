@@ -3,7 +3,10 @@ import { useState } from 'react';
 const Example = () => {
   const orderObj = { item: 'apple', count: 10 };
   const [order, setOrder] = useState(orderObj);
-  const changeItem = (e) => {};
+  const changeItem = (e) => {
+    //オブジェクトを複製して新しいオブジェクトを生成
+    setOrder(order => {})
+  };
   const countUp = () => {};
   const countDown = () => {};
   return (
