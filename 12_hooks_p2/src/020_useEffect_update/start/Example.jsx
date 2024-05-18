@@ -13,6 +13,11 @@ const Example = () => {
   useEffect(() => {
     console.log('Updated');
   },[time])
+
+  useEffect(() => {
+    document.title = 'counter' + time;
+    window.localStorage.setItem('time-key',time)
+})
   
   return (
     <h3>
