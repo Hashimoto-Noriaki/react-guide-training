@@ -1,4 +1,35 @@
 import { useState } from "react";
+import styled from "styled-components";
+
+const StyledButton = styled.button `//タグ付きテンプレート
+  margin: auto;
+  border-radius: 9999px;
+  border: none;
+  display: block;
+  width: 120px;
+  height: 60px;
+  font-weight: bold;
+  cursor: pointer;
+  background: ${({isSelected}) => isSelected ? 'pink' : ''};
+
+  /* POINT メディアクエリ */
+  @media (max-width: 600px) {
+    border-radius: 0;
+  }
+`;
+
+const GreenButton = styled(StyledButton)`
+  background-color: green;
+
+  :hover {
+    color: red;
+    opacity:0.7;
+  }
+
+  span {
+    font-size:1em;
+  }
+`;
 
 const Example = () => {
   const [isSelected, setIsSelected] = useState(false);
@@ -7,6 +38,8 @@ const Example = () => {
 
   return (
     <>
+      <StyledButton　isSelected={isSelected} onClick={clickHandler}>ボタン</StyledButton>
+      <GreenButton　isSelected={isSelected} onClick={clickHandler}><span>サブボタン</span></GreenButton>
       <button
         className={`btn ${isSelected ? "selected" : ""}`}
         onClick={clickHandler}
